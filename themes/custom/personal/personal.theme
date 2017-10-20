@@ -1,0 +1,85 @@
+<?php
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function personal_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    $content_type = $node->bundle();
+    $suggestions[] = 'page__'.$content_type;
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_alter().
+ */
+function personal_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
+  if ($hook == 'form' & !empty($variables['element']['#theme'])) {
+    $suggestions[] = 'form__' . $variables['element']['#theme'][0];
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+*/
+function personal_theme($existing, $type, $theme, $path) {
+  return [
+    'contact-message-feedback-form' => [ 
+      'render element' => 'form',
+    ]
+  ];
+} 
+
+/**
+ * hook_form_FORM_ID_alter
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function personal_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	//print_r($form);
+  $form['actions']['submit']['#submit'][] = 'personal_contact_submit';
+
+  // Name
+  $form['name']['#title'] = 'Full Name';
+  $form['name']['#description'] = 'Please write your full name';
+
+  // Mail
+  $form['mail']['#title'] = 'E-mail Address';
+
+  // Subject
+  $form['subject']['widget'][0]['value']['#title'] = 'Subject';
+  
+  // Message
+  $form['message']['widget'][0]['value']['#title'] = 'Your Message';
+}
+
+/**
+ * Contact form submit handler
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function personal_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  //drupal_set_message('Thanks!');
+  //$form_state->setRedirect('contact');
+  $form_state->setRedirect(
+  'entity.node.canonical',
+     ['node' => 60]
+  );
+}
+
+function personal_preprocess_status_messages(&$variables) {
+  $message = 'You cannot send more than.';
+  if (isset($_SESSION['messages'])) {
+    foreach ($_SESSION['messages'] as $type => $messages) {
+      if ($type == 'status') {
+        $key = array_search($message, $messages);
+        if ($key !== FALSE) {
+          unset($_SESSION['messages'][$type][$key]);
+        }
+      }
+    }
+  }
+}

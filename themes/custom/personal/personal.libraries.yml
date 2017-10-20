@@ -1,0 +1,12 @@
+# Global Styling
+global-styling:
+  css:
+    theme:
+      # css/bootstrap.css: {}
+      # css/collora_layout.css: {}
+      css/custom.css: {}
+      css/font-awesome.min.css: {}
+      css/font-awesome.css: {}
+
+  js:
+    js/script.js: {}

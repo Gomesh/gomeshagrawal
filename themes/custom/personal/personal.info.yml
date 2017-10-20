@@ -1,0 +1,54 @@
+name: Personal Theme
+type: theme
+description: 'Simple but fully customizable theme.'
+base theme: bootstrap
+
+libraries:
+   - personal/global-styling
+   
+regions:
+   social_icons: 'Social Icons'
+   search: 'Search'
+   navigation: 'Navigation'
+   header: 'Top Bar'
+   banner: 'Banner'
+   banner_desc: 'Banner Description'
+   atto_deta_contact: 'Attorrney Contact Information'
+   prac_area_block: 'Practice Area Block'
+   our_firm_block: 'Our Firm Block'
+   news_block: 'News Block'
+   atto_deta_content: 'Attorrney Contact Content'
+   atto_profile_tabs: 'Attorrney Profile Tabs'
+   at_prof_tabs_Mob: 'Attorrney Profile Tabs For Mobile'
+   atto_newsevents: 'Attorney News And Events'
+   highlighted: 'Highlighted'
+   help: 'Help'
+   content: 'Content'
+   area_expertise: 'Area of Expertise'
+   featured: 'Featured'
+   featured_mob: 'Featured Mobile'
+   collora_team: 'Collora Team'
+   collora_team_sear: 'Collora Team Search'
+   collora_team_view: 'Collora Team Views All'
+   related_newsevent: 'Related News Events'
+   related_attorney: 'Related Attorney'
+   related_atto_mob: 'Related Attorney For Mobile'
+   att_spotlight:    'Attorney Spotlight'
+   att_spotlight_read: 'Attorney Spotlight Read More'
+   sidebar_first: 'Primary'
+   sidebar_second: 'Secondry'
+   footer: 'Footer'
+   page_top_col: 'Page top'
+   page_bottom_col: 'Page bottom'
+   settings[regionclass][footer][]: 'col-sm-9'
+
+# plugins
+plugins:
+   page_layout:
+   - layouts: 'layouts/core'
+
+# Information added by Drupal.org packaging script on 2015-12-23
+version: '8.x-1.0'
+core: '8.x'
+project: 'incroyable'
+datestamp: 1454052240
