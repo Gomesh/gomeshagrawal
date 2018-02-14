@@ -62,12 +62,8 @@ function personal_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  */
 function personal_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  //drupal_set_message('Thanks!');
-  //$form_state->setRedirect('contact');
-  $form_state->setRedirect(
-  'entity.node.canonical',
-     ['node' => 60]
-  );
+  drupal_set_message('Thanks!');
+  $form_state->setRedirect('contact.site_page');
 }
 
 function personal_preprocess_status_messages(&$variables) {

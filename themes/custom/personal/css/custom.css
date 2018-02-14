@@ -16249,7 +16249,7 @@ body:not(.has-banner-image).transparent-header #header,
 }
 
 .footermenu ul li{
-    margin-right: 91px;
+    margin-right: 148px;
 }
 
 .footermenu ul li a:hover{
@@ -20407,7 +20407,7 @@ pre,
 }
 
 #footerBlocks .sqs-block-content h2 {
-    font-size: 28px;
+    font-size: 25px;
     font-weight: 300;
     letter-spacing: .1px;
     text-transform: none
