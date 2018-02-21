@@ -1,7 +1,4 @@
-/*! Squarespace LESS Compiler  (less.js language v1.3.3)  */
-
-
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/*! Site Css*/
 
 article,
 aside,
@@ -2720,7 +2717,7 @@ only screen and (min-resolution:192dpi) {
 }
 
 [class*=sqs-col] .sqs-block {
-    padding-left: 17px;
+    padding-left: 30px;
     padding-right: 17px
 }
 
@@ -16021,7 +16018,8 @@ body {
     color: #181818;
 }
 
-body.has-glyphicons .desc-wrapper p:last-child>a{
+body.has-glyphicons .desc-wrapper p:last-child>a,
+body.has-glyphicons .desc-wrapper-mid p:last-child>a{
     background-color: transparent;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -16815,10 +16813,29 @@ li.filter {
     margin: 0 auto;
     padding: 32px;
     text-align: center;
-    text-rendering: optimizeLegibility
+    text-rendering: optimizeLegibility;
+    margin-bottom: 107px;
+    margin-top: 120px
 }
 
-.desc-wrapper p {
+.desc-wrapper-mid{
+    -webkit-animation: feature-text-anim 1.75s ease-in-out;
+    animation: feature-text-anim 1.75s ease-in-out;
+    z-index: 100;
+    position: relative;
+    width: 100%;
+    max-width: 956px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 32px;
+    text-align: center;
+    text-rendering: optimizeLegibility;
+}
+
+.desc-wrapper p,
+.desc-wrapper-mid p{
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
     font-size: 18px;
@@ -16835,13 +16852,16 @@ li.filter {
     -webkit-transform: translatez(0)
 }
 
-.desc-wrapper p a {
+.desc-wrapper p a,
+.desc-wrapper-mid p a{
     color: #fff;
     border-bottom: 1px solid #fff
 }
 
 .desc-wrapper p>strong,
-.desc-wrapper p>em>strong {
+.desc-wrapper p>em>strong,
+.desc-wrapper-mid p>strong,
+.desc-wrapper-mid p>em>strong{
     display: block;
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 400;
@@ -16858,11 +16878,13 @@ li.filter {
     color: #fff
 }
 
-.desc-wrapper p>em>strong {
+.desc-wrapper p>em>strong,
+.desc-wrapper-mid p>em>strong{
     font-style: italic
 }
 
-.desc-wrapper p:last-child>a {
+.desc-wrapper p:last-child>a, 
+.desc-wrapper-mid p:last-child>a{
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -16892,15 +16914,18 @@ li.filter {
     transition: background-color .1s 0s ease-in-out, color .1s 0s ease-in-out
 }
 
-.desc-wrapper p:last-child>a:hover {
+.desc-wrapper p:last-child>a:hover,
+.desc-wrapper-mid p:last-child>a:hover{
     background-color: rgba(255, 255, 255, .8)
 }
 
-.desc-wrapper p:last-child>a+a {
+.desc-wrapper p:last-child>a+a,
+.desc-wrapper-mid p:last-child>a+a{
     margin-left: 1em
 }
 
-.desc-wrapper p:empty {
+.desc-wrapper p:empty,
+.desc-wrapper-mid p:empty{
     display: none
 }
 
@@ -16915,6 +16940,7 @@ body:not(.collection-type-gallery).banner-button-style-outline.has-promoted-gall
 }
 
 body:not(.collection-type-gallery).banner-button-style-outline .desc-wrapper p:last-child>a:hover,
+body:not(.collection-type-gallery).banner-button-style-outline .desc-wrapper-mid p:last-child>a:hover,
 body:not(.collection-type-gallery).banner-button-style-outline.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a:hover,
 body:not(.collection-type-gallery).banner-button-style-outline.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a:hover {
     background-color: #fff;
@@ -16922,6 +16948,7 @@ body:not(.collection-type-gallery).banner-button-style-outline.has-promoted-gall
 }
 
 body:not(.collection-type-gallery).banner-button-style-raised .desc-wrapper p:last-child>a,
+body:not(.collection-type-gallery).banner-button-style-raised .desc-wrapper-mid p:last-child>a,
 body:not(.collection-type-gallery).banner-button-style-raised.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a,
 body:not(.collection-type-gallery).banner-button-style-raised.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a {
     -webkit-box-shadow: 0px .2em 0px 0px #ebebeb;
@@ -16930,12 +16957,14 @@ body:not(.collection-type-gallery).banner-button-style-raised.has-promoted-galle
 }
 
 body:not(.collection-type-gallery).banner-button-style-raised .desc-wrapper p:last-child>a:hover,
+body:not(.collection-type-gallery).banner-button-style-raised .desc-wrapper-mid p:last-child>a:hover,
 body:not(.collection-type-gallery).banner-button-style-raised.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a:hover,
 body:not(.collection-type-gallery).banner-button-style-raised.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a:hover {
     background-color: #fff
 }
 
 body:not(.collection-type-gallery).banner-button-corner-style-rounded .desc-wrapper p:last-child>a,
+body:not(.collection-type-gallery).banner-button-corner-style-rounded .desc-wrapper-mid p:last-child>a,
 body:not(.collection-type-gallery).banner-button-corner-style-rounded.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a,
 body:not(.collection-type-gallery).banner-button-corner-style-rounded.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a {
     -webkit-border-radius: 3px;
@@ -16943,6 +16972,7 @@ body:not(.collection-type-gallery).banner-button-corner-style-rounded.has-promot
 }
 
 body:not(.collection-type-gallery).banner-button-corner-style-pill .desc-wrapper p:last-child>a,
+body:not(.collection-type-gallery).banner-button-corner-style-pill .desc-wrapper-mid p:last-child>a,
 body:not(.collection-type-gallery).banner-button-corner-style-pill.has-promoted-gallery #promotedGalleryWrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a,
 body:not(.collection-type-gallery).banner-button-corner-style-pill.has-promoted-gallery .promoted-gallery-wrapper .sqs-gallery-block-slideshow .meta-description p:last-child>a {
     -webkit-border-radius: 300px;
@@ -18980,6 +19010,10 @@ html.touch .squarespace-comments .comments-content .comment-list .comment .comme
 }
 
 @media only screen and (max-width:640px) {
+    .desc-wrapper {
+        margin-bottom: 0;
+        margin-top: 0
+    }
     .sqs-layout [class*=sqs-col] {
         float: none !important;
         width: auto !important

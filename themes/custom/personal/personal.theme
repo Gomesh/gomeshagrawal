@@ -79,3 +79,10 @@ function personal_preprocess_status_messages(&$variables) {
     }
   }
 }
+
+/**
+ * Implements theme_preprocess_node().
+ */
+function personal_preprocess_node(&$variables) {
+  $variables['view1'] = views_embed_view('view1', 'fun_in_life_block');
+}
