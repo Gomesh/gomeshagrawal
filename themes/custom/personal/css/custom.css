@@ -16916,7 +16916,9 @@ li.filter {
 
 .desc-wrapper p:last-child>a:hover,
 .desc-wrapper-mid p:last-child>a:hover{
-    background-color: rgba(255, 255, 255, .8)
+    background-color: rgba(255, 255, 255, .8);
+    background-color: #ffffff !important;
+    color: #181818 !important;
 }
 
 .desc-wrapper p:last-child>a+a,
