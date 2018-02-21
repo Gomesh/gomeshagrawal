@@ -19,7 +19,7 @@ regions:
    my_life: 'My Life'
    find_out_how: 'Find Out How'
    footer: 'Footer'
-  #  settings[regionclass][footer][]: 'col-sm-9'
+  #  settings[regionclass][footer][]: 'col-sm-9' 
 
 # plugins
 plugins:

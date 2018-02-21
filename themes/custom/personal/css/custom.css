@@ -19016,6 +19016,9 @@ html.touch .squarespace-comments .comments-content .comment-list .comment .comme
         margin-bottom: 0;
         margin-top: 0
     }
+    .desc-wrapper-mid p>strong{
+        font-size: 45px;
+    }
     .sqs-layout [class*=sqs-col] {
         float: none !important;
         width: auto !important
