@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Provider\ProviderBase.
+ */
 
 namespace Drupal\bootstrap\Plugin\Provider;
 

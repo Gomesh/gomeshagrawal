@@ -1,7 +1,12 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\ProviderManager.
+ */
 
 namespace Drupal\bootstrap\Plugin;
 
+use Drupal\bootstrap\Plugin\Provider\ProviderInterface;
 use Drupal\bootstrap\Theme;
 
 /**
@@ -33,7 +38,7 @@ class ProviderManager extends PluginManager {
    */
   public function processDefinition(&$definition, $plugin_id) {
     parent::processDefinition($definition, $plugin_id);
-    /** @var \Drupal\bootstrap\Plugin\Provider\ProviderInterface $provider */
+    /** @var ProviderInterface $provider */
     $provider = new $definition['class'](['theme' => $this->theme], $plugin_id, $definition);
     $provider->processDefinition($definition, $plugin_id);
   }

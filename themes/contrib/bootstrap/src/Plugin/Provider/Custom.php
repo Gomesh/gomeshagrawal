@@ -1,6 +1,13 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Provider\Custom.
+ */
 
 namespace Drupal\bootstrap\Plugin\Provider;
+
+use Drupal\bootstrap\Annotation\BootstrapProvider;
+use Drupal\Core\Annotation\Translation;
 
 /**
  * The "custom" CDN provider plugin.

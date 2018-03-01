@@ -1,7 +1,12 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Preprocess\FilterTips.
+ */
 
 namespace Drupal\bootstrap\Plugin\Preprocess;
 
+use Drupal\bootstrap\Annotation\BootstrapPreprocess;
 use Drupal\bootstrap\Utility\Variables;
 use Drupal\Core\Url;
 

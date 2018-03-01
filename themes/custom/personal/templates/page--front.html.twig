@@ -50,14 +50,41 @@
  * @ingroup themeable
  */
 #}
-<section id="sitewrapper" class="wrapper">
+{# <div id="sidecarNav">
+  <div id="mobileNavWrapper" class="nav-wrapper" data-content-field="navigation-mobileNav">
+    <nav id="mobileNavigation">
+      <div id="yui_3_17_2_1_1495119926740_1107" class="index active homepage">
+        <a id="yui_3_17_2_1_1495119926740_1106" href="/"> Home </a>
+      </div>
+      <div class="index">
+        <a href="/drupal-code-shop/"> Code Shop </a>
+      </div>
+      <div class="index">
+        <a href="/portfolio/"> Portfolio </a>
+      </div>
+      <div class="index">
+        <a href="/about/"> About </a>
+      </div>
+      <div class="index">
+        <a href="/resume/"> Resume </a>
+      </div>
+      <div class="collection">
+        <a href="/blog/"> Blog </a>
+      </div>
+      <div class="index">
+        <a href="/contact/"> Contact </a>
+      </div>
+    </nav>
+  </div>
+</div> #}
+<div id="sitewrapper" class="wrapper">
     <header id="header" class="topRow navbar-fixed-top">
             <div class="header-inner">
                 <div id="logoWrapper" class="row headerTopBlock logo">
                   <h1 id="logoImage">
                     <a id="yui_3_17_2_1_1492429029436_1359" href="/">
-                        <img src="/drupal844/themes/custom/personal/images/ga_logo.png?format=1500w" class="desktop" alt="GomeshAgrawal.com">
-                        <img src="/drupal844/themes/custom/personal/images/ga_logo.png?format=1500w" class="mobile" alt="GomeshAgrawal.com">
+                        <img src="/themes/custom/personal/images/ga_logo.png?format=1500w" class="desktop" alt="GomeshAgrawal.com">
+                        <img src="/themes/custom/personal/images/ga_logo.png?format=1500w" class="mobile" alt="GomeshAgrawal.com">
                     </a>
                   </h1>
                 </div><!--row end-->
@@ -94,13 +121,13 @@
                     <div class="firstvideooverlay" style="height:100% !important; width:100% !important; top:0 !important; left:0 !important; position:absolute !important; background:#000 !important; opacity:0.0 !important;"></div>
                    </div>
                    <figure id="thumbnail" class="loading content-fill" style="overflow: hidden;">
-                     <img class="" data-src="/drupal844/themes/custom/personal/images/black_sky.jpg" data-image="/drupal844/themes/custom/personal/images/black_sky.jpg" data-image-dimensions="1500x800" data-image-focal-point="0.5,0.5" style="top: -110px; left: 0px; position: relative;" src="/drupal844/themes/custom/personal/images/black_sky.jpg?format=1500w" data-image-resolution="1500w">
+                     <img class="" data-src="/themes/custom/personal/images/black_sky.jpg" data-image="/themes/custom/personal/images/black_sky.jpg" data-image-dimensions="1500x800" data-image-focal-point="0.5,0.5" style="top: -110px; left: 0px; position: relative;" src="/themes/custom/personal/images/black_sky.jpg?format=1500w" data-image-resolution="1500w">
                    </figure>
                    <div class="desc-wrapper" data-collection-id="57132acdb654f96a652d07d2">
                      <p>I'm working hard to deliver the best to our clients.</p>
                      <p id="yui_3_17_2_1_1492265937570_1035"><strong data-shrink-original-size="68" style="letter-spacing: 0.0588235em;">Let's create something incredible</strong>
                      </p>
-                     <p><a href="/portfolio">Learn How</a> 
+                     <p><a href="/portfolio">Learn How</a>
                      </p>
                    </div>
                 </div>
@@ -188,17 +215,14 @@
                             </div>
                           </div>
                           <div id="yui_3_17_2_1_1494919842477_258" class="row sqs-row">
-                            {# {% if page.drupal_projects is not empty %}
-                         	       {{ page.drupal_projects }}
-                            {% endif %} #}
                             <div id="yui_3_17_2_1_1494919842477_257" class="col sqs-col-4 span-4">
                               <div id="block-yui_3_17_2_3_1460869228159_10521" class="sqs-block image-block sqs-block-image sqs-text-ready" data-block-type="5">
                                 <div id="yui_3_17_2_1_1494919842477_256" class="sqs-block-content">
                                   <div id="yui_3_17_2_1_1494919842477_255" class="image-block-outer-wrapper layout-caption-overlay-hover design-layout-inline sqs-narrow-width">
                                     <div id="yui_3_17_2_1_1494919842477_254" class="intrinsic" style="max-width:600.0px;">
                                       <div id="yui_3_17_2_1_1494919842477_253" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:100.0%;" data-description="<p><em>Drupal Website</em></p><p><strong>Jason Klock</strong></p><p><a href="/jason-klock">View Project</a></p>">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/genetics2.jpg" alt="Drupal Website Jason Klock View Project" /></noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/genetics2.jpg" data-image="/drupal844/themes/custom/personal/images/genetics2.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="584598f9d1758ec839a47e61" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website Jason Klock View Project" src="/drupal844/themes/custom/personal/images/genetics2.jpg?format=500w" data-image-resolution="500w">
+                                        <noscript><img src="/themes/custom/personal/images/genetics2.jpg" alt="Drupal Website Jason Klock View Project" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/genetics2.jpg" data-image="/themes/custom/personal/images/genetics2.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="584598f9d1758ec839a47e61" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website Jason Klock View Project" src="/themes/custom/personal/images/genetics2.jpg?format=500w" data-image-resolution="500w">
                                       </div>
                                       <div class="image-caption-wrapper">
                                         <div class="image-caption">
@@ -224,8 +248,8 @@
                                   <div id="yui_3_17_2_1_1494919842477_279" class="image-block-outer-wrapper layout-caption-overlay-hover design-layout-inline sqs-narrow-width">
                                     <div id="yui_3_17_2_1_1494919842477_278" class="intrinsic" style="max-width:600.0px;">
                                       <div id="yui_3_17_2_1_1494919842477_277" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:100.0%;" data-description="<p><em>Drupal Website</em></p><p><strong>Nxt Level Atx</strong></p><p><a href="/next-level-athletix">View Project</a></p>">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/genes.jpg" alt="Drupal Website Nxt Level Atx View Project" /></noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/genes.jpg" data-image="/drupal844/themes/custom/personal/images/genes.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5845989ff5e231a28450153e" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website Nxt Level Atx View Project" src="/drupal844/themes/custom/personal/images/genes.jpg?format=500w" data-image-resolution="500w">
+                                        <noscript><img src="/themes/custom/personal/images/genes.jpg" alt="Drupal Website Nxt Level Atx View Project" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/genes.jpg" data-image="/themes/custom/personal/images/genes.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5845989ff5e231a28450153e" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website Nxt Level Atx View Project" src="/themes/custom/personal/images/genes.jpg?format=500w" data-image-resolution="500w">
                                       </div>
                                       <div class="image-caption-wrapper">
                                         <div class="image-caption">
@@ -251,8 +275,8 @@
                                   <div id="yui_3_17_2_1_1494919842477_297" class="image-block-outer-wrapper layout-caption-overlay-hover design-layout-inline sqs-narrow-width">
                                     <div id="yui_3_17_2_1_1494919842477_296" class="intrinsic" style="max-width:600.0px;">
                                       <div id="yui_3_17_2_1_1494919842477_295" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:100.0%;" data-description="<p><em>Drupal Website</em></p><p><strong>James Reid</strong></p><p><a href="/james-reid">View Project</a></p>">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/asm.jpg" alt="Drupal Website James Reid View Project" /></noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/asm.jpg" data-image="/drupal844/themes/custom/personal/images/asm.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58459937bebafb2a2ebb97fc" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website James Reid View Project" src="/drupal844/themes/custom/personal/images/asm.jpg?format=500w" data-image-resolution="500w">
+                                        <noscript><img src="/themes/custom/personal/images/asm.jpg" alt="Drupal Website James Reid View Project" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/asm.jpg" data-image="/themes/custom/personal/images/asm.jpg" data-image-dimensions="600x600" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58459937bebafb2a2ebb97fc" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" alt="Drupal Website James Reid View Project" src="/themes/custom/personal/images/asm.jpg?format=500w" data-image-resolution="500w">
                                       </div>
                                       <div class="image-caption-wrapper">
                                         <div class="image-caption">
@@ -322,8 +346,8 @@
                                   <div id="yui_3_17_2_1_1492319686272_338" class="image-block-outer-wrapper layout-caption-hidden design-layout-inline">
                                     <div id="yui_3_17_2_1_1492319686272_337" class="intrinsic" style="max-width:74.0px;">
                                       <div id="yui_3_17_2_1_1492319686272_336" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:78.37837982177734%;">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/code.png " /></noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/code.png" data-image="/drupal844/themes/custom/personal/images/code.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc1f2fe131e466605497" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/drupal844/themes/custom/personal/images/code.png?format=100w" data-image-resolution="100w">
+                                        <noscript><img src="/themes/custom/personal/images/code.png " /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/code.png" data-image="/themes/custom/personal/images/code.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc1f2fe131e466605497" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/themes/custom/personal/images/code.png?format=100w" data-image-resolution="100w">
                                       </div>
                                     </div>
                                   </div>
@@ -347,9 +371,9 @@
                                   <div id="yui_3_17_2_1_1492319686272_360" class="image-block-outer-wrapper layout-caption-hidden design-layout-inline">
                                     <div id="yui_3_17_2_1_1492319686272_359" class="intrinsic" style="max-width:74.0px;">
                                       <div id="yui_3_17_2_1_1492319686272_358" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:78.37837982177734%;">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/code2.png" />  
+                                        <noscript><img src="/themes/custom/personal/images/code2.png" />  
                                         </noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/code2.png" data-image="/drupal844/themes/custom/personal/images/code2.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc2886db43573ee9d160" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/drupal844/themes/custom/personal/images/code2.png?format=100w" data-image-resolution="100w">
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/code2.png" data-image="/themes/custom/personal/images/code2.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc2886db43573ee9d160" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/themes/custom/personal/images/code2.png?format=100w" data-image-resolution="100w">
                                       </div>
                                     </div>
                                   </div>
@@ -371,8 +395,8 @@
                                   <div id="yui_3_17_2_1_1492319686272_377" class="image-block-outer-wrapper layout-caption-hidden design-layout-inline">
                                     <div id="yui_3_17_2_1_1492319686272_376" class="intrinsic" style="max-width:74.0px;">
                                       <div id="yui_3_17_2_1_1492319686272_375" class="image-block-wrapper has-aspect-ratio" style="padding-bottom:78.37837982177734%;">
-                                        <noscript><img src="/drupal844/themes/custom/personal/images/code3.png" /></noscript>
-                                        <img class="thumb-image loaded" data-src="/drupal844/themes/custom/personal/images/code3.png" data-image="/drupal844/themes/custom/personal/images/code3.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc312fe131e46660552b" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/drupal844/themes/custom/personal/images/code3.png?format=100w" data-image-resolution="100w">
+                                        <noscript><img src="/themes/custom/personal/images/code3.png" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/code3.png" data-image="/themes/custom/personal/images/code3.png" data-image-dimensions="74x58" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="5760bc312fe131e46660552b" data-type="image" style="top: 0%; left: 0%; width: 100%; height: 100%; position: absolute;" src="/themes/custom/personal/images/code3.png?format=100w" data-image-resolution="100w">
                                       </div>
                                     </div>
                                   </div>
@@ -407,15 +431,15 @@
                 <div class="banner-thumbnail-wrapper has-description">
                   <div class="color-overlay"></div>
                   <figure id="thumbnail" class="loading content-fill" style="overflow: hidden;">
-                    <img class="" data-src="/drupal844/themes/custom/personal/images/nature.jpg" data-image="/drupal844/themes/custom/personal/images/nature.jpg" data-image-dimensions="1500x918" data-image-focal-point="0.5,0.5" style="top: -201px; left: 0px;position: relative;" src="/drupal844/themes/custom/personal/images/nature.jpg?format=1500w" data-image-resolution="1500w">
+                    <img class="" data-src="/themes/custom/personal/images/nature.jpg" data-image="/themes/custom/personal/images/nature.jpg" data-image-dimensions="1500x918" data-image-focal-point="0.5,0.5" style="top: -201px; left: 0px;position: relative;" src="/themes/custom/personal/images/nature.jpg?format=1500w" data-image-resolution="1500w">
                   </figure>
-                  <div class="desc-wrapper-mid" data-collection-id="57504f474c2f85c0e9462d36">
+                  <div class="desc-wrapper" data-collection-id="57504f474c2f85c0e9462d36">
                     <p>Have a Drupal site and need help from an expert?</p>
                     <p id="yui_3_17_2_1_1492319686272_1041">
                       <strong data-shrink-original-size="68" style="letter-spacing: 0.0588235em;">Hire a Drupal developer today</strong>
                     </p>
                     <p>
-                      <a href="/drupal-developer">Find Out How</a> 
+                      <a href="/drupal-developer">Find Out How</a>
                     </p>
                   </div>
                 </div>
@@ -436,9 +460,98 @@
                             </div>
                           </div>
                           <div id="block-yui_3_17_2_48_1455477396286_7040" class="sqs-block instagram-block sqs-block-instagram" data-block-json="{"title":true,"thumbnail":true,"excerpt":true,"pageSize":10,"filter":{},"hSize":null,"floatDir":null,"pageCollectionId":"56c13a5045bf218b7f4bc06b","containingItemId":null,"show-meta-only-title":false,"connectedAccountId":"5750453eb09f95f3b30b5ead","enable-search":false,"socialCollectionId":"","previewCollectionId":"","status":"undefined","searchId":"undefined","searchTerm":"","refresh":null,"unsafeSearch":null,"design":"grid","aspectRatio":null,"auto-crop":true,"square-thumbs":true,"aspect-ratio":"square","show-meta":true,"thumbnails-per-row":5,"padding":10,"lightbox":true,"lightboxTheme":"dark","collectionId":"5750453eb09f95f3b30b5ead","vSize":null}" data-block-type="25">
-                            {% if page.my_life is not empty %}
-                         	       {{ page.my_life }}
-                            {% endif %}
+                            <div id="yui_3_17_2_1_1492319686272_705" class="sqs-block-content">
+                              <div id="yui_3_17_2_1_1492319686272_536" class=" sqs-gallery-container sqs-gallery-block-grid sqs-gallery-aspect-ratio-square sqs-gallery-thumbnails-per-row-5">
+                                <div id="yui_3_17_2_1_1492319686272_553" class="sqs-gallery">
+                                  <div id="yui_3_17_2_1_1492319686272_568" class="slide sqs-gallery-design-grid-slide sqs-active-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492319686272_720" class="image-slide-anchor content-fill" data-title="" data-description="I'd love to share with everyone my new company, SQUAR (yes, it's spelled without an E). SQUAR is a newly established creative digital agency located in Harrisburg, PA. Feel free to follow @squar.co for more details. #drupal" data-lightbox-theme="dark" href="/themes/custom/personal/images/cofeecup.jpeg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/cofeecup.jpeg" alt="I'd love to share with everyone my new company, SQUAR (yes, it's spelled without an E). SQUAR is a newly established creative digital agency located in Harrisburg, PA. Feel free to follow @squar.co for more details. #drupal" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/cofeecup.jpeg" data-image="/themes/custom/personal/images/cofeecup.jpeg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58f0ec9930454416989ade9d" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="I'd love to share with everyone my new company, SQUAR (yes, it's spelled without an E). SQUAR is a newly established creative digital agency located in Harrisburg, PA. Feel free to follow @squar.co for more details. #drupal" src="/themes/custom/personal/images/cofeecup.jpeg" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_569" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492319686272_725" class="image-slide-anchor content-fill" data-title="" data-description="Early morning in Midtown. #smallbusinessowner #office #harrisburg" data-lightbox-theme="dark" href="/themes/custom/personal/images/office.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/office.jpg" alt="office" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/office.jpg" data-image="/themes/custom/personal/images/office.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58d8f639365ffa9c80350f43" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="Early morning in Midtown. #office" src="/themes/custom/personal/images/office.jpg?format=300w" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_570" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492319686272_730" class="image-slide-anchor content-fill" data-title="" data-description="Friday goodness. #coffee" data-lightbox-theme="dark" href="/themes/custom/personal/images/project.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/project.jpg" alt="Friday goodness. #coffee" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/project.jpg" data-image="/themes/custom/personal/images/project.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58cc4719f7d1ff2ac8fca706" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="Friday goodness. #coffee" src="/themes/custom/personal/images/project.jpg?format=300w" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_571" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492319686272_735" class="image-slide-anchor content-fill" data-title="" data-description="Second desk ready for an intern this spring! #internship #drupal #smallbusiness #startup" data-lightbox-theme="dark" href="/themes/custom/personal/images/dog-in-latte.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/dog-in-latte.jpg" alt="Second desk ready for an intern this spring! #internship #drupal #smallbusiness #startup" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/dog-in-latte.jpg" data-image="/themes/custom/personal/images/dog-in-latte.jpg" data-image-dimensions="640x637" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58c2c37017044b76b00a7465" data-type="image" style="top: 0px; left: 0px; width: 197px; height: 196px; position: relative;" alt="Second desk ready for an intern this spring! #internship #drupal #smallbusiness #startup" src="/themes/custom/personal/images/dog-in-latte.jpg" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_572" class="slide sqs-gallery-design-grid-slide">
+                                   <div id="yui_3_17_2_1_1492575056438_1071" class="margin-wrapper">
+                                    <a id="yui_3_17_2_1_1492575056438_740" class="image-slide-anchor content-fill" data-title="" data-description="New wireframe, new website, new company, and a lot of news coming soon. #businessowner #smallbusiness #drupal" data-lightbox-theme="dark" href="/themes/custom/personal/images/dogy.jpg" style="overflow: hidden;">
+                                      <noscript><img src="/themes/custom/personal/images/dogy.jpg" alt="New wireframe, new website, new company, and a lot of news coming soon. #businessowner #smallbusiness #drupal" /></noscript>
+                                      <img class="thumb-image loaded" data-src="/themes/custom/personal/images/dogy.jpg" data-image="/themes/custom/personal/images/dogy.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58b0516b304544a5f569d75f" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="New wireframe, new website, new company, and a lot of news coming soon. #businessowner #smallbusiness #drupal" src="/themes/custom/personal/images/dogy.jpg" data-image-resolution="300w">
+                                    </a>
+                                  </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_573" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492575056438_745" class="image-slide-anchor content-fill" data-title="" data-description="Only two months into 2017 and there are many projects lined up already. I'm just glad I have this whiteboard to help keep things organized. #whiteboard #drupal #smallbusiness" data-lightbox-theme="dark" href="/themes/custom/personal/images/new.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/new.jpg" alt="Only two months into 2017 and there are many projects lined up already. I'm just glad I have this whiteboard to help keep things organized. #whiteboard #drupal #smallbusiness" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/new.jpg" data-image="/themes/custom/personal/images/new.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58af1bed9656ca692ae5be26" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="Only two months into 2017 and there are many projects lined up already. I'm just glad I have this whiteboard to help keep things organized. #whiteboard #drupal #smallbusiness" src="/themes/custom/personal/images/new.jpg" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_574" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492575056438_750" class="image-slide-anchor content-fill" data-title="" data-description="Drupal Plug-ins 25% OFF Holiday Special, use code: XMAS25OFF. Link in bio" data-lightbox-theme="dark" href="/themes/custom/personal/images/drupal8.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/drupal8.jpg" alt="Drupal Plug-ins 25% OFF Holiday Special, use code: XMAS25OFF. Link in bio" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/drupal8.jpg" data-image="/themes/custom/personal/images/drupal8.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="585048ac05b037fa856187d0" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="Drupal Plug-ins 25% OFF Holiday Special, use code: XMAS25OFF. Link in bio" src="/themes/custom/personal/images/drupal8.jpg?format=300w" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_575" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492575056438_755" class="image-slide-anchor content-fill" data-title="" data-description="Finally updated my portfolio with nine months worth of work. I've worked with some amazing and passionate people throughout 2016, and I couldn't have pushed myself as far is a did without them. Head over to Devonstank.com and take a look at my latest work. #drupal @jasonklock @jr_impact @nxtlevelatx" data-lightbox-theme="dark" href="/themes/custom/personal/images/coffee.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/coffee.jpg" alt="Finally updated my portfolio with nine months worth of work. I've worked with some amazing and passionate people throughout 2016, and I couldn't have pushed myself as far is a did without them. Head over to Devonstank.com and take a look at my latest work. #drupal @jasonklock @jr_impact @nxtlevelatx" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/coffee.jpg" data-image="/themes/custom/personal/images/coffee.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="584b204d91b186b160c78818" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="Finally updated my portfolio with nine months worth of work. I've worked with some amazing and passionate people throughout 2016, and I couldn't have pushed myself as far is a did without them. Head over to Devonstank.com and take a look at my latest work. #drupal @jasonklock @jr_impact @nxtlevelatx" src="/themes/custom/personal/images/coffee.jpg?format=300w" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_576" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492575056438_760" class="image-slide-anchor content-fill" data-title="" data-description="It's a Latte kinda morning. #coffee #coffeeshop #latte #littleamps" data-lightbox-theme="dark" href="/themes/custom/personal/images/apple.jpg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/apple.jpg" alt="It's a Latte kinda morning. #coffee #coffeeshop #latte #littleamps" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/apple.jpg" data-image="/themes/custom/personal/images/apple.jpg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="582b1e4f5a730faaff2ba399" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="It's a Latte kinda morning. #coffee #coffeeshop #latte #littleamps" src="/themes/custom/personal/images/apple.jpg?format=300w" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                  <div id="yui_3_17_2_1_1492319686272_577" class="slide sqs-gallery-design-grid-slide">
+                                    <div class="margin-wrapper">
+                                      <a id="yui_3_17_2_1_1492575056438_765" class="image-slide-anchor content-fill" data-title="" data-description="At another amazing @klockentertainment wedding! Keep it up @jasonklock! #dj #wedding #drupal" data-lightbox-theme="dark" href="/themes/custom/personal/images/scene.jpeg" style="overflow: hidden;">
+                                        <noscript><img src="/themes/custom/personal/images/scene.jpeg" alt="At another amazing @klockentertainment wedding! Keep it up @jasonklock! #dj #wedding #drupal" /></noscript>
+                                        <img class="thumb-image loaded" data-src="/themes/custom/personal/images/scene.jpeg" data-image="/themes/custom/personal/images/scene.jpeg" data-image-dimensions="640x640" data-image-focal-point="0.5,0.5" data-load="false" data-image-id="58153a2fd44194f061e4f366" data-type="image" style="top: 0px; left: 0px; width: 196px; height: 196px; position: relative;" alt="At another amazing @klockentertainment wedding! Keep it up @jasonklock! #dj #wedding #drupal" src="/themes/custom/personal/images/scene.jpeg" data-image-resolution="300w">
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <style id="design-grid-css" type="text/css"></style>
+                            </div>
+                             </div>
+                                </div>
+                              </div>
+                              <style id="design-grid-css" type="text/css"></style>
+                            </div>
                           </div>
                           <div id="block-yui_3_17_2_48_1455477396286_19600" class="sqs-block button-block sqs-block-button">
                             <div class="sqs-block-content">
@@ -548,4 +661,4 @@
         </div>
       </div>
     </footer>
-</section>
+  </div>

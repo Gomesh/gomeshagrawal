@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Annotation\BootstrapUpdate.
+ */
 
 namespace Drupal\bootstrap\Annotation;
 
@@ -48,12 +52,12 @@ class BootstrapUpdate extends Plugin {
   public $severity = 'default';
 
   /**
-   * Indicates whether or not the update should apply only to itself.
-   *
-   * Only the theme that implemented the plugin and none of its sub-themes.
+   * Indicates whether or not the update should apply only to itself
+   * (the theme that implemented the plugin) and none of its sub-themes.
    *
    * @var bool
    */
   public $private = FALSE;
+
 
 }

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Form\FormInterface.
+ */
 
 namespace Drupal\bootstrap\Plugin\Form;
 

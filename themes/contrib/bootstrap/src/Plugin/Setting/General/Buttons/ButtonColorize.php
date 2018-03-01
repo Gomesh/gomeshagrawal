@@ -1,8 +1,14 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Setting\General\Buttons\ButtonColorize.
+ */
 
 namespace Drupal\bootstrap\Plugin\Setting\General\Buttons;
 
+use Drupal\bootstrap\Annotation\BootstrapSetting;
 use Drupal\bootstrap\Plugin\Setting\SettingBase;
+use Drupal\Core\Annotation\Translation;
 
 /**
  * The "button_colorize" theme setting.
@@ -20,8 +26,8 @@ use Drupal\bootstrap\Plugin\Setting\SettingBase;
  *     "button" = @Translation("Buttons"),
  *   },
  *   see = {
- *     "https://getbootstrap.com/docs/3.3/css/#buttons" = @Translation("Buttons"),
- *     "https://drupal-bootstrap.org/apis/hook_bootstrap_colorize_text_alter" = @Translation("hook_bootstrap_colorize_text_alter()"),
+ *     "http://getbootstrap.com/css/#buttons" = @Translation("Buttons"),
+ *     "http://drupal-bootstrap.org/apis/hook_bootstrap_colorize_text_alter" = @Translation("hook_bootstrap_colorize_text_alter()"),
  *   },
  * )
  */

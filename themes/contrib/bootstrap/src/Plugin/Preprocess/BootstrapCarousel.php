@@ -1,7 +1,12 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Preprocess\BootstrapCarousel.
+ */
 
 namespace Drupal\bootstrap\Plugin\Preprocess;
 
+use Drupal\bootstrap\Annotation\BootstrapPreprocess;
 use Drupal\bootstrap\Bootstrap;
 use Drupal\bootstrap\Utility\Element;
 use Drupal\bootstrap\Utility\Variables;
@@ -70,10 +75,8 @@ class BootstrapCarousel extends PreprocessBase implements PreprocessInterface {
         '#theme' => 'item_list__bootstrap_carousel_indicators',
         '#list_type' => 'ol',
         '#items' => array_keys($variables->slides),
-        '#context' => [
-          'target' => "#$id",
-          'start_index' => $variables->start_index,
-        ],
+        '#target' => "#$id",
+        '#start_index' => $variables->start_index,
       ];
     }
 

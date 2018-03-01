@@ -1,7 +1,6 @@
 <?php
 
 namespace Drupal\Tests\node\Functional\Migrate\d6;
-
 use Drupal\Tests\node\Kernel\Migrate\d6\MigrateNodeTestBase;
 
 /**
@@ -14,7 +13,7 @@ class MigrateNodeRevisionTest extends MigrateNodeTestBase {
   /**
    * {@inheritdoc}
    */
-  public static $modules = ['language', 'content_translation', 'menu_ui'];
+  public static $modules = ['language', 'content_translation'];
 
   /**
    * {@inheritdoc}

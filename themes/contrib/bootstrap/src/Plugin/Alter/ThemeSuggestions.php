@@ -1,7 +1,12 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Alter\ThemeSuggestions.
+ */
 
 namespace Drupal\bootstrap\Plugin\Alter;
 
+use Drupal\bootstrap\Annotation\BootstrapAlter;
 use Drupal\bootstrap\Bootstrap;
 use Drupal\bootstrap\Plugin\PluginBase;
 use Drupal\bootstrap\Utility\Unicode;
@@ -18,8 +23,6 @@ use Drupal\Core\Entity\EntityInterface;
 class ThemeSuggestions extends PluginBase implements AlterInterface {
 
   /**
-   * The element types that should be converted into Panel markup.
-   *
    * @var array
    */
   protected $bootstrapPanelTypes = ['details', 'fieldset'];
@@ -140,18 +143,15 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
    ***************************************************************************/
 
   /**
-   * Adds suggestions based on an array of hooks.
+   * Add a suggestion to the list of suggestions.
    *
-   * @param string|string[] $hook
-   *   A single theme hook suggestion or an array of theme hook suggestions.
+   * @param string $hook
+   *   The theme hook suggestion to add.
    */
   protected function addSuggestion($hook) {
-    $hooks = (array) $hook;
-    foreach ($hooks as $hook) {
-      $suggestions = $this->buildSuggestions($hook);
-      foreach ($suggestions as $suggestion) {
-        $this->suggestions[] = $suggestion;
-      }
+    $suggestions = $this->buildSuggestions($hook);
+    foreach ($suggestions as $suggestion) {
+      $this->suggestions[] = $suggestion;
     }
   }
 
@@ -161,13 +161,13 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
    * This is a helper method because core's implementation of theme hook
    * suggestions on entities is inconsistent.
    *
+   * @see https://www.drupal.org/node/2808481
+   *
    * @param string $entity_type
    *   Optional. A specific type of entity to look for.
    * @param string $prefix
    *   Optional. A prefix (like "entity") to use. It will automatically be
    *   appended with the "__" separator.
-   *
-   * @see https://www.drupal.org/node/2808481
    *
    * @todo Remove/refactor once core issue is resolved.
    */
@@ -180,8 +180,6 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
     // Extract the entity.
     if ($entity = $this->getEntityObject($entity_type)) {
       $entity_type_id = $entity->getEntityTypeId();
-      $suggestions = [];
-
       // Only add the entity type identifier if there's a prefix.
       if (!empty($prefix)) {
         $prefix .= '__';
@@ -198,11 +196,6 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
           $suggestions[] = $prefix . $entity_type_id . '__' . $entity->bundle() . '__' . $view_mode;
         }
       }
-
-      // Add suggestions.
-      if ($suggestions) {
-        $this->addSuggestion($suggestions);
-      }
     }
   }
 
@@ -213,7 +206,6 @@ class ThemeSuggestions extends PluginBase implements AlterInterface {
    *   The theme hook suggestion to build.
    *
    * @return array
-   *   An list of theme hook suggestions.
    */
   protected function buildSuggestions($hook) {
     $suggestions = [];

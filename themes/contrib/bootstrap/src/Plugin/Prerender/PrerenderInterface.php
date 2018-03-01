@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Prerender\PrerenderInterface.
+ */
 
 namespace Drupal\bootstrap\Plugin\Prerender;
 

@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Setting\SettingBase.
+ */
 
 namespace Drupal\bootstrap\Plugin\Setting;
 
@@ -51,22 +55,14 @@ class SettingBase extends PluginBase implements SettingInterface {
    */
   public function getElementProperties() {
     $properties = $this->getPluginDefinition();
-    $ignore_keys = [
-      'class',
-      'defaultValue',
-      'definition',
-      'groups',
-      'id',
-      'provider',
-      'see',
-    ];
     foreach ($properties as $name => $value) {
-      if (in_array($name, $ignore_keys)) {
+      if (in_array($name, ['class', 'defaultValue', 'definition', 'groups', 'id', 'provider', 'see'])) {
         unset($properties[$name]);
       }
     }
     return $properties;
   }
+
 
   /**
    * {@inheritdoc}
@@ -180,7 +176,6 @@ class SettingBase extends PluginBase implements SettingInterface {
     }
     return $group->$plugin_id;
   }
-
   /**
    * {@inheritdoc}
    */

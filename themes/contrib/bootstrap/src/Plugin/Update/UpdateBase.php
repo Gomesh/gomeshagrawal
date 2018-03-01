@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Update\UpdateBase.
+ */
 
 namespace Drupal\bootstrap\Plugin\Update;
 
