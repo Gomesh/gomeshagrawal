@@ -18762,6 +18762,18 @@ html.touch .squarespace-comments .comments-content .comment-list .comment .comme
     cursor: pointer
 }
 
+/* .views-field .views-field-nothing:hover{
+    position: relative;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: -217px;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+} */
+
 .banner-slideshow-controls-both .sqs-featured-posts-gallery .arrow.previous-slide,
 .banner-slideshow-controls-arrows .sqs-featured-posts-gallery .arrow.previous-slide {
     left: 0
