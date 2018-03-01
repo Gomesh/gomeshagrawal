@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Setting\SettingInterface.
+ */
 
 namespace Drupal\bootstrap\Plugin\Setting;
 

@@ -1,7 +1,12 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Preprocess\FormElement.
+ */
 
 namespace Drupal\bootstrap\Plugin\Preprocess;
 
+use Drupal\bootstrap\Annotation\BootstrapPreprocess;
 use Drupal\bootstrap\Utility\Element;
 use Drupal\bootstrap\Utility\Variables;
 
@@ -25,14 +30,14 @@ class FormElement extends PreprocessBase implements PreprocessInterface {
       $variables['is_autocomplete'] = TRUE;
     }
 
-    // See https://getbootstrap.com/docs/3.3/css/#forms-controls.
+    // See http://getbootstrap.com/css/#forms-controls.
     $checkbox = $variables['is_checkbox'] = $element->isType('checkbox');
     $radio = $variables['is_radio'] = $element->isType('radio');
 
     // Determine if the form element should have the "form-group" class added.
     // Use an explicitly set property from the element or use its other
     // properties as the criteria to determine if it should be set.
-    $variables['is_form_group'] = $element->getProperty('form_group', !$checkbox && !$radio && !$element->isType('hidden'));
+    $variables['is_form_group'] = $element->getProperty('form_group', !$variables['is_checkbox'] && !$variables['is_radio'] && !$element->isType(['hidden', 'textarea']));
 
     // Add label_display and label variables to template.
     $display = $variables['label_display'] = $variables['title_display'] = $element->getProperty('title_display');

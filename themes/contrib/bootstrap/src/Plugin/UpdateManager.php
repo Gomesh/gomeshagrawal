@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\UpdateManager.
+ */
 
 namespace Drupal\bootstrap\Plugin;
 

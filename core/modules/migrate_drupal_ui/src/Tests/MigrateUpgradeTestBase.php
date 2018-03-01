@@ -2,8 +2,6 @@
 
 namespace Drupal\migrate_drupal_ui\Tests;
 
-@trigger_error('\Drupal\migrate_drupal_ui\Tests\MigrateUpgradeTestBase is deprecated in Drupal 8.4.0 and will be removed before Drupal 9.0.0. Use \Drupal\Tests\migrate_drupal_ui\Functional\MigrateUpgradeTestBase instead.', E_USER_DEPRECATED);
-
 use Drupal\Core\Database\Database;
 use Drupal\migrate\Plugin\MigrateIdMapInterface;
 use Drupal\migrate_drupal\MigrationConfigurationTrait;
@@ -11,17 +9,12 @@ use Drupal\simpletest\WebTestBase;
 
 /**
  * Provides a base class for testing migration upgrades in the UI.
- *
- * @deprecated in Drupal 8.4.0 and will be removed before Drupal 9.0.0. Use
- *   \Drupal\Tests\migrate_drupal_ui\Functional\MigrateUpgradeTestBase instead.
  */
 abstract class MigrateUpgradeTestBase extends WebTestBase {
   use MigrationConfigurationTrait;
 
   /**
    * Use the Standard profile to test help implementations of many core modules.
-   *
-   * @var string
    */
   protected $profile = 'standard';
 
@@ -37,17 +30,7 @@ abstract class MigrateUpgradeTestBase extends WebTestBase {
    *
    * @var array
    */
-  public static $modules = [
-    'language',
-    'content_translation',
-    'migrate_drupal_ui',
-    'telephone',
-    'aggregator',
-    'book',
-    'forum',
-    'statistics',
-    'modules_available_test',
-  ];
+  public static $modules = ['language', 'content_translation', 'migrate_drupal_ui', 'telephone'];
 
   /**
    * {@inheritdoc}
@@ -121,7 +104,7 @@ abstract class MigrateUpgradeTestBase extends WebTestBase {
   public function testMigrateUpgrade() {
     $connection_options = $this->sourceDatabase->getConnectionOptions();
     $this->drupalGet('/upgrade');
-    $this->assertText('Upgrade a site by importing its database and files into a clean and empty new install of Drupal 8.');
+    $this->assertText('Upgrade a site by importing it into a clean and empty new install of Drupal 8. You will lose any existing configuration once you import your site into it. See the online documentation for Drupal site upgrades for more detailed information.');
 
     $this->drupalPostForm(NULL, [], t('Continue'));
     $this->assertText('Provide credentials for the database of the Drupal site you want to upgrade.');
@@ -151,31 +134,7 @@ abstract class MigrateUpgradeTestBase extends WebTestBase {
 
     $this->drupalPostForm(NULL, $edits, t('Review upgrade'));
     $this->assertResponse(200);
-    $this->assertText('Upgrade analysis report');
-    // Ensure we get errors about missing modules.
-    $this->assertText(t('Source module not found for module_no_annotation.'));
-    $this->assertText(t('Source module not found for modules_available_test.'));
-    $this->assertText(t('Destination module not found for modules_available_test'));
-
-    // Uninstall the module causing the missing module error messages.
-    $this->container->get('module_installer')->uninstall(['modules_available_test'], TRUE);
-
-    // Restart the upgrade process.
-    $this->drupalGet('/upgrade');
-    $this->assertText('Upgrade a site by importing its database and files into a clean and empty new install of Drupal 8.');
-
-    $this->drupalPostForm(NULL, [], t('Continue'));
-    $this->assertText('Provide credentials for the database of the Drupal site you want to upgrade.');
-    $this->assertFieldByName('mysql[host]');
-
-    $this->drupalPostForm(NULL, $edits, t('Review upgrade'));
-    $this->assertResponse(200);
-    $this->assertText('Upgrade analysis report');
-    // Ensure there are no errors about the missing modules.
-    $this->assertNoText(t('Source module not found for module_no_annotation.'));
-    $this->assertNoText(t('Source module not found for modules_available_test.'));
-    $this->assertNoText(t('Destination module not found for modules_available_test'));
-    // Check for any missing module errors.
+    $this->assertText('Are you sure?');
     $this->drupalPostForm(NULL, [], t('Perform upgrade'));
     $this->assertText(t('Congratulations, you upgraded Drupal!'));
 
@@ -184,9 +143,8 @@ abstract class MigrateUpgradeTestBase extends WebTestBase {
     $this->resetAll();
 
     $expected_counts = $this->getEntityCounts();
-    foreach (array_keys(\Drupal::entityTypeManager()
-      ->getDefinitions()) as $entity_type) {
-      $real_count = \Drupal::entityQuery($entity_type)->count()->execute();
+    foreach (array_keys(\Drupal::entityTypeManager()->getDefinitions()) as $entity_type) {
+      $real_count = count(\Drupal::entityTypeManager()->getStorage($entity_type)->loadMultiple());
       $expected_count = isset($expected_counts[$entity_type]) ? $expected_counts[$entity_type] : 0;
       $this->assertEqual($expected_count, $real_count, "Found $real_count $entity_type entities, expected $expected_count.");
     }

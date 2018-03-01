@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Annotation\BootstrapPrerender.
+ */
 
 namespace Drupal\bootstrap\Annotation;
 

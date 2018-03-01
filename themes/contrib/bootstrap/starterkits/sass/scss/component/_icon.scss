@@ -2,24 +2,20 @@
  * Icon styles.
  */
 a {
-  &.icon-before .glyphicon,
-  & .glyphicon.icon-before {
+  &.icon-before .glyphicon {
     margin-right: .25em;
   }
-  &.icon-after .glyphicon,
-  & .glyphicon.icon-after {
+  &.icon-after .glyphicon {
     margin-left: .25em;
   }
 }
 
 .btn {
-  &.icon-before .glyphicon,
-  & .glyphicon.icon-before {
+  &.icon-before .glyphicon {
     margin-left: -.25em;
     margin-right: .25em;
   }
-  &.icon-after .glyphicon,
-  & .glyphicon.icon-after {
+  &.icon-after .glyphicon {
     margin-left: .25em;
     margin-right: -.25em;
   }

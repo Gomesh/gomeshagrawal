@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\ProcessManager.
+ */
 
 namespace Drupal\bootstrap\Plugin;
 
@@ -88,8 +92,7 @@ class ProcessManager extends PluginManager {
     $ajax = $element->getProperty('ajax');
 
     // Show throbber AJAX requests in an input button group.
-    $ignore_types = ['checkbox', 'checkboxes', 'hidden', 'radio', 'radios'];
-    if ((!isset($ajax['progress']['type']) || $ajax['progress']['type'] === 'throbber') && !$element->isType($ignore_types)) {
+    if (!$element->isType('hidden') && (!isset($ajax['progress']['type']) || $ajax['progress']['type'] === 'throbber')) {
       // Use an icon for autocomplete "throbber".
       $icon = Bootstrap::glyphicon('refresh');
       $element->appendProperty('field_suffix', Element::create($icon)->addClass(['ajax-progress', 'ajax-progress-throbber']));
@@ -155,7 +158,7 @@ class ProcessManager extends PluginManager {
    * @param \Drupal\bootstrap\Utility\Element $element
    *   The element to iterate over.
    *
-   * @return \Drupal\bootstrap\Utility\Element|false
+   * @return \Drupal\bootstrap\Utility\Element|FALSE
    *   The first button element or FALSE if no button could be found.
    */
   protected static function &findButton(Element $element) {

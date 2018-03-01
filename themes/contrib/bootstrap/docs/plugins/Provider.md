@@ -1,4 +1,4 @@
-<!-- @file Documentation for the @BootstrapProvider annotated plugin. -->
+<!-- @file Documentation for the @BootstrapProvider annotated discovery plugin. -->
 <!-- @defgroup -->
 <!-- @ingroup -->
 # @BootstrapProvider

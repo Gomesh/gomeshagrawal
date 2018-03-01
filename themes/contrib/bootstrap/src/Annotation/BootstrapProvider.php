@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Annotation\BootstrapProvider.
+ */
 
 namespace Drupal\bootstrap\Annotation;
 

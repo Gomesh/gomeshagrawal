@@ -1,4 +1,4 @@
-<!-- @file Documentation for the @BootstrapProcess annotated plugin. -->
+<!-- @file Documentation for the @BootstrapProcess annotated discovery plugin. -->
 <!-- @defgroup -->
 <!-- @ingroup -->
 # @BootstrapProcess
@@ -29,11 +29,14 @@ Create a file at `./THEMENAME/src/Plugin/Process/TextFormat.php` with the
 following contents:
 
 ```php
-<?php
+/**
+ * @file
+ * Contains \Drupal\THEMENAME\Plugin\Process\TextFormat.
+ */
 
 namespace Drupal\THEMENAME\Plugin\Process;
 
-use Drupal\bootstrap\Plugin\Process\TextFormat as BootstrapTextFormat;
+use Drupal\bootstrap\Annotation\BootstrapProcess;
 use Drupal\bootstrap\Utility\Element;
 use Drupal\Core\Form\FormStateInterface;
 
@@ -46,12 +49,11 @@ use Drupal\Core\Form\FormStateInterface;
  *
  * @see \Drupal\filter\Element\TextFormat::processFormat()
  */
-class TextFormat extends BootstrapTextFormat {
-  /*
-   * It should be noted that you do not need both methods here.
-   * This is to just show you the different examples of how this plugin
-   * works and how it can be tailored to your needs.
-   */
+class TextFormat extends \Drupal\bootstrap\Plugin\Process\TextFormat {
+
+  // It should be noted that you do not need both methods here.
+  // This is to just show you the different examples of how this plugin
+  // works and how it can be tailored to your needs.
 
   /**
    * {@inheritdoc}
@@ -64,10 +66,9 @@ class TextFormat extends BootstrapTextFormat {
 
     // Technically this isn't the method that we need to achieve our goal.
     // But showing it just for example sake.
-    //
-    // You must always return the element in this method, as well as call the
-    // parent method when sub-classing this method as it is used to invoke
-    // static::processElement();
+
+    // You must always return the element in this method, as well as call
+    // the parent method when sub-classing this method, it invokes processElement();
     return parent::process($element, $form_state, $complete_form);
   }
 
@@ -78,11 +79,10 @@ class TextFormat extends BootstrapTextFormat {
     // Normally, we'd call the parent method here. But this is actually an
     // instance where we know we don't want to use the alterations made by
     // the base theme. So we just comment it out and leave the method empty.
-    // parent::processElement($element, $form_state, $complete_form);.
+    // parent::processElement($element, $form_state, $complete_form);
   }
 
 }
-?>
 ```
 
 ## Rebuild the cache {#rebuild}
@@ -95,5 +95,4 @@ To rebuild your cache, navigate to `admin/config/development/performance` and
 click the `Clear all caches` button. Or if you prefer, run `drush cr` from the
 command line.
 
-Voilà! After this, you should have a fully functional `@BootstrapProcess`
-plugin!
+Voilà! After this, you should have a fully functional `@BootstrapProcess` plugin!

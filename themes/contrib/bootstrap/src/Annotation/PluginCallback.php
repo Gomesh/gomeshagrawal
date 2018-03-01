@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Annotation\PluginCallback.
+ */
 
 namespace Drupal\bootstrap\Annotation;
 
@@ -27,8 +31,6 @@ class PluginCallback extends PluginID {
   /**
    * Flag that determines how to add the plugin to a callback array.
    *
-   * @var \Drupal\bootstrap\Annotation\BootstrapConstant
-   *
    * Must be one of the following constants:
    *   - \Drupal\bootstrap\Bootstrap::CALLBACK_APPEND
    *   - \Drupal\bootstrap\Bootstrap::CALLBACK_PREPEND
@@ -37,6 +39,8 @@ class PluginCallback extends PluginID {
    * Use with @ BootstrapConstant annotation.
    *
    * @see \Drupal\bootstrap\Bootstrap::addCallback()
+   *
+   * @var \Drupal\bootstrap\Annotation\BootstrapConstant
    */
   public $action = Bootstrap::CALLBACK_APPEND;
 
