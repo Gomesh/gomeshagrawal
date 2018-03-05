@@ -1,4 +1,8 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Utility\StorageItem.
+ */
 
 namespace Drupal\bootstrap\Utility;
 

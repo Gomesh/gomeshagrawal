@@ -16916,9 +16916,7 @@ li.filter {
 
 .desc-wrapper p:last-child>a:hover,
 .desc-wrapper-mid p:last-child>a:hover{
-    background-color: rgba(255, 255, 255, .8);
-    background-color: #ffffff !important;
-    color: #181818 !important;
+    background-color: rgba(255, 255, 255, .8)
 }
 
 .desc-wrapper p:last-child>a+a,
@@ -18762,18 +18760,6 @@ html.touch .squarespace-comments .comments-content .comment-list .comment .comme
     cursor: pointer
 }
 
-/* .views-field .views-field-nothing:hover{
-    position: relative;
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: -217px;
-    text-align: center;
-    font-size: 25px;
-    font-weight: bold;
-} */
-
 .banner-slideshow-controls-both .sqs-featured-posts-gallery .arrow.previous-slide,
 .banner-slideshow-controls-arrows .sqs-featured-posts-gallery .arrow.previous-slide {
     left: 0
@@ -19027,9 +19013,6 @@ html.touch .squarespace-comments .comments-content .comment-list .comment .comme
     .desc-wrapper {
         margin-bottom: 0;
         margin-top: 0
-    }
-    .desc-wrapper-mid p>strong{
-        font-size: 45px;
     }
     .sqs-layout [class*=sqs-col] {
         float: none !important;

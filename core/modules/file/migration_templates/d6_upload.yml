@@ -9,11 +9,11 @@ process:
   vid: vid
   type: type
   upload:
-    plugin: sub_process
+    plugin: iterator
     source: upload
     process:
       target_id:
-        plugin: migration_lookup
+        plugin: migration
         migration: d6_file
         source: fid
       display: list

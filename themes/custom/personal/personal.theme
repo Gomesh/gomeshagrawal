@@ -62,8 +62,12 @@ function personal_form_contact_message_feedback_form_alter(&$form, \Drupal\Core\
  * @param \Drupal\Core\Form\FormStateInterface $form_state
  */
 function personal_contact_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
-  drupal_set_message('Thanks!');
-  $form_state->setRedirect('contact.site_page');
+  //drupal_set_message('Thanks!');
+  //$form_state->setRedirect('contact');
+  $form_state->setRedirect(
+  'entity.node.canonical',
+     ['node' => 60]
+  );
 }
 
 function personal_preprocess_status_messages(&$variables) {
@@ -78,11 +82,4 @@ function personal_preprocess_status_messages(&$variables) {
       }
     }
   }
-}
-
-/**
- * Implements theme_preprocess_node().
- */
-function personal_preprocess_node(&$variables) {
-  $variables['view1'] = views_embed_view('view1', 'fun_in_life_block');
 }

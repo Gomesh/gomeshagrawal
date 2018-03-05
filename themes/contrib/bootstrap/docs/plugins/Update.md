@@ -1,4 +1,4 @@
-<!-- @file Documentation for the @BootstrapUpdate annotated plugin. -->
+<!-- @file Documentation for the @BootstrapUpdate annotated discovery plugin. -->
 <!-- @defgroup -->
 <!-- @ingroup -->
 # @BootstrapUpdate

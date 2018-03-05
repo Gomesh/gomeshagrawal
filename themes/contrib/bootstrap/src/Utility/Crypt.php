@@ -1,15 +1,17 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Utility\Crypt.
+ */
 
 namespace Drupal\bootstrap\Utility;
-
-use Drupal\Component\Utility\Crypt as CoreCrypt;
 
 /**
  * Extends \Drupal\Component\Utility\Crypt.
  *
  * @ingroup utility
  */
-class Crypt extends CoreCrypt {
+class Crypt extends \Drupal\Component\Utility\Crypt {
 
   /**
    * Generates a unique hash name.
@@ -32,5 +34,4 @@ class Crypt extends CoreCrypt {
     $hash .= self::hashBase64(serialize($args));
     return $hash;
   }
-
 }

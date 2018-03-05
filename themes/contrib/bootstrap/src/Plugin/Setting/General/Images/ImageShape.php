@@ -1,8 +1,14 @@
 <?php
+/**
+ * @file
+ * Contains \Drupal\bootstrap\Plugin\Setting\General\Images\ImageShape.
+ */
 
 namespace Drupal\bootstrap\Plugin\Setting\General\Images;
 
+use Drupal\bootstrap\Annotation\BootstrapSetting;
 use Drupal\bootstrap\Plugin\Setting\SettingBase;
+use Drupal\Core\Annotation\Translation;
 
 /**
  * The "image_shape" theme setting.
@@ -26,7 +32,7 @@ use Drupal\bootstrap\Plugin\Setting\SettingBase;
  *     "img-thumbnail" = @Translation("Thumbnail"),
  *   },
  *   see = {
- *     "https://getbootstrap.com/docs/3.3/css/#images-shapes" = @Translation("Image Shapes"),
+ *     "http://getbootstrap.com/css/#images-shapes" = @Translation("Image Shapes"),
  *   },
  * )
  */

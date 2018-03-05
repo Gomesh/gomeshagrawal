@@ -11,20 +11,15 @@ process:
   # the cid field to allow incremental migrations.
   cid: cid
   pid:
-    plugin: migration_lookup
+    plugin: migration
     migration: d6_comment
     source: pid
   entity_id: nid
   entity_type: 'constants/entity_type'
-  comment_type:
-    -
-      plugin: migration_lookup
-      source: type
-      migration: d6_comment_type
-    -
-      plugin: skip_on_empty
-      method: row
-  field_name: '@comment_type'
+  # field_name & comment_type is calculated in
+  # \Drupal\migrate_drupal\Plugin\migrate\source\d6\Comment::prepareRow()
+  field_name: field_name
+  comment_type: comment_type
   subject: subject
   uid: uid
   name: name
@@ -37,7 +32,7 @@ process:
   thread: thread
   'comment_body/value': comment
   'comment_body/format':
-    plugin: migration_lookup
+    plugin: migration
     migration: d6_filter_format
     source: format
 destination:
